@@ -13,19 +13,45 @@ module.exports = React.createClass({
   render(){
     return(
       <View style={styles.container}>
-        <Text>
-          To-Do Master
-        </Text>
+        <View style={styles.item}>
+          <Text>Item 1</Text>
+      </View>
+      <View style={styles.item}>
+          <Text>Item 2</Text>
+      </View>
+      </View>
+      <View style={styles.largeItem}>
+        <View style={styles.item}>
+          <Text>
+            Item 3a
+          </Text>
+        </View>
+        <View style={styles.item}>
+          <Text>
+            Item 3b
+          </Text>
+        </View>
+
       </View>
     )
-
   }
 })
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center';
+    borderWidth: 3,
+    borderColor: 'green',
+    flexDirection: 'row'
+  },
+  item: {
+    flex: 1,
+    borderWidth: 3,
+    borderColor: 'black'
+  },
+  largeItem:{
+    flex: 3,
+    borderWidth: 3,
+    borderColor: 'blue'
   }
 })
